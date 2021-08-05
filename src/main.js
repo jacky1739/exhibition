@@ -33,6 +33,11 @@ import toCurrency from './assets/javascript/toCurrency'
 // coupon
 import { date, currency } from './methods/filters'
 
+// wow
+import Wow from 'wow.js'
+import 'wow.js/css/libs/animate.css'
+new Wow().init()
+
 // createApp(App).use(router).mount('#app')
 const app = createApp(App)
 // 註冊 vee-validate 三個全域元件
