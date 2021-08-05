@@ -1,0 +1,24 @@
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import '~bootstrap/scss/functions';
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import './helpers/variables';
+@import '~bootstrap/scss/mixins';
+
+// ~ sass 對應 node_modules
+@import '~bootstrap';
+@import 'utilitie';
+@import 'FontNavbar';
+@import 'Dashboard';
+@import 'Products';
+@import 'Product';
+@import 'Confirm';
+@import 'Login';
+@import 'ShopCart';
+@import 'Order';
+@import 'Checkout';
+@import 'Admin/Login';
+@import 'About';
+@import 'GassYouLike';

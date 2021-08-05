@@ -1,0 +1,16 @@
+.about-banner {
+    background-image: url('../public/images/aboutus-1.jpg');
+    background-position: 50%;
+    height: 350px;
+    background-size: cover;
+}
+
+.about-content-img {
+    background-image: url('../public/images/aboutus-2.jpg');
+    background-position: bottom;
+    height: 500px;
+    background-size: cover;
+    @media (max-width: 375px) {
+        background-position: right;
+    }
+}
