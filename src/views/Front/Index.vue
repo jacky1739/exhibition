@@ -12,10 +12,16 @@
       </div>
     </div>
   </div>
+  <GassYouLike />
 </template>
 
 <script>
+import GassYouLike from '@/components/GassYouLike.vue'
+
 export default {
+  components: {
+    GassYouLike
+  },
   data () {
     return {
       products: []

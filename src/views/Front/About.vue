@@ -1,5 +1,4 @@
 <template>
-  <FrontNavBar />
   <section class="about-banner d-flex mb-5">
     <div class="container d-flex align-items-center justify-content-center">
         <div class="row">
@@ -33,16 +32,4 @@
       </div>
     </div>
   </section>
-  <Footer />
 </template>
-
-<script>
-import FrontNavBar from '@/components/FrontNavBar.vue'
-import Footer from '@/components/Footer.vue'
-
-export default {
-  components: { FrontNavBar, Footer },
-  data () {
-  }
-}
-</script>
