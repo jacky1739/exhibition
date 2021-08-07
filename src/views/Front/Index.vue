@@ -35,9 +35,10 @@
         <p class="text-center font-size-light">肩負推動臺灣現當代藝術的保存、研究、發展與普及之使命，掌握全球趨勢、建立多元交流管道，提升普羅大眾對現當代藝術的認知與參與，促使臺灣現當代藝術發展臻至蓬勃，全民藝術涵養更加豐沛，以期形成具有美感修為及文化思辨力的當代社會。</p>
       </div>
     </div>
+
     <h2 class="text-center font-size-bold p-4">館舍建築</h2>
     <div class="row mb-4">
-      <div class="col-lg-5 building-img"></div>
+      <div class="col-md-5 building-img"></div>
       <div class="col-md-7 d-flex">
         <div class="d-flex align-items-center justify-content-center">
           <ul>
