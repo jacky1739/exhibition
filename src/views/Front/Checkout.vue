@@ -1,5 +1,4 @@
 <template>
-  <FrontNavBar />
   <div class="wrap container">
       <div class="row shadow p-4 mb-5">
         <div class="col-md-7">
@@ -51,8 +50,6 @@
 </template>
 
 <script>
-import FrontNavBar from '@/components/FrontNavBar.vue'
-// import emitter from '../assets/javascript/emitter'
 
 export default {
   data () {
@@ -95,7 +92,6 @@ export default {
       this.$router.push('/')
     }
   },
-  components: { FrontNavBar },
   created () {
     this.getOrder()
   }

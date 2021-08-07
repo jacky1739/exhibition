@@ -24,8 +24,27 @@ const routes = [
         path: 'order',
         name: 'order',
         component: () => import('@/views/Front/Order.vue')
+      },
+      {
+        path: 'checkout/:orderId',
+        name: 'checkout',
+        component: () => import('@/views/Front/Checkout.vue')
+      },
+      {
+        path: 'test',
+        name: 'test',
+        component: () => import('@/views/Front/Test.vue')
       }
     ]
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import('@/views/Admin/Login.vue')
+  },
+  {
+    path: '/admin',
+    component: () => import('@/views/Admin/Admin.vue')
   }
 ]
 
@@ -51,14 +70,6 @@ const routes = [
 //     component: () => import('@/views/Front/Product.vue')
 //   },
 //   {
-//     path: '/order',
-//     component: () => import('@/views/Front/Order.vue')
-//   },
-//   {
-//     path: '/checkout/:orderId',
-//     component: () => import('@/views/Front/Checkout.vue')
-//   },
-//   {
 //     path: '/login',
 //     component: () => import('@/views/Admin/Login.vue')
 //   },
@@ -75,11 +86,6 @@ const routes = [
 //     name: 'NotFound',
 //     component: () => import('@/views/Front/NotFound.vue')
 //   },
-// {
-//   path: '/about',
-//   name: 'aboutus',
-//   component: () => import('@/views/Front/About.vue')
-// }
 // ]
 
 const router = createRouter({

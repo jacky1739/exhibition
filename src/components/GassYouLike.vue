@@ -1,6 +1,6 @@
 <template>
   <!-- 熱門展覽 一般展覽 特別展覽 -->
-  <div class="container">
+  <div class="container mb-5">
     <div class="row">
       <h2 class="font-size-bold text-center mb-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">展覽種類說明</h2>
       <div class="col-md-4 mb-3">
@@ -17,6 +17,11 @@
         <div class="like-2 mb-3  wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s"></div>
         <h2 class="text-center wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.5s">一般展覽</h2>
         <p class="font-size-light wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.5s">延續藝術家近年的創作核心，將對人為秩序的深沉憧憬，轉化為覆蓋、轉譯與改寫等方法，為直線與幾何造形構成的既存邏輯、秩序和空間感進行更生，展現人處於都會空間與機械文明下的狀態。</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <a href="#/test" role="button" class="btn btn-secondary rounded-pill wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.5s">瀏覽全部展覽</a>
       </div>
     </div>
   </div>

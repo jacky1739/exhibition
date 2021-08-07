@@ -43,10 +43,10 @@
         <div class="d-flex align-items-center justify-content-center">
           <ul>
             <li>
-              <p class="text-center text-third font-size-light">來自法國的三星主廚說：生活必須是一件愉快的事情，這一切應該從你的早餐開始。</p>
+              <p class="text-center text-third font-size-light">因應市民生活品質需要與文化藝術水準之提昇，，七十二年元月完工，並於同年十二月二十四日正式落成開館，開啟了為市民服務之使命。</p>
             </li>
             <li>
-              <p class="text-center text-third font-size-light">您"的感覺外，也要在消費者的心中建立起"FITNESSMALL的早餐是專屬為我現做的"。</p>
+              <p class="text-center text-third font-size-light">採「井」字形結體，將傳統建築元素之斗拱堆砌為主體架構，意在以美術館為文化活水之泉源。四周牆面設計使用整片玻璃採光，中樞內庭承接自然光源，光影隨時間移動而變化，顯現出自然生動之特質。</p>
             </li>
             <li>
               <p class="text-center text-third font-size-light">您"的感覺外，也要在消費者的心中建立起"FITNESSMALL的早餐是專屬為我現做的"。</p>
