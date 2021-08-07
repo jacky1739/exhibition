@@ -10,3 +10,26 @@
         display: none;
     }
 }
+
+
+.building-img {
+    background-image: url('../public/images/build.jpg');
+    background-position: center center;
+    background-size: cover;
+    height: 350px;
+    @media (max-width: 768px) {
+        width: 300px;
+        height: 400px;
+    }
+    @media(max-width: 375px) {
+        display: none;
+    }
+}
+
+.building-banner {
+    background-image: url('../public/images/build-banner.jpg');
+    background-position: center center;
+    background-size: cover;
+    height: 350px;
+    width: 100%;
+}

@@ -14,15 +14,14 @@
   </div>
   <GassYouLike />
   <div class="container mb-5">
-    <div class="row">
-      <div class="col-md-5 place-img">
-      </div>
-      <div class="col-md-7 palce-info card-body-color">
+    <div class="row mb-4">
+      <div class="col-md-5 place-img"></div>
+      <div class="col-md-7 card-body-color">
         <h2 class="text-center font-size-bold p-4">場所介紹</h2>
         <ul class="d-flex justify-content-around mb-5">
           <li>
             <i class="bi bi-geo-fill d-flex justify-content-center" style="font-size: 40px"></i>
-            <h2>地點方便</h2>
+            <h2>交通方便</h2>
           </li>
           <li>
             <i class="bi bi-cash-stack d-flex justify-content-center" style="font-size: 40px"></i>
@@ -33,8 +32,30 @@
             <h2>專業導覽</h2>
           </li>
         </ul>
-        <p class="text-center font-size-light">食物能夠傳遞喜悅與滿足。從蔬果產地、水質清洗到人工逐葉揀選，講究新鮮品質與食安衛生，無毒且口感水嫩清脆， 打造安心且獨一無二的輕食品，讓您在味蕾間，品嘗疏食鮮甜的感動與原味本質。打造安心且獨一無二的輕食品，讓您在味蕾間，品嘗疏食鮮甜的感動與原味本質</p>
+        <p class="text-center font-size-light">肩負推動臺灣現當代藝術的保存、研究、發展與普及之使命，掌握全球趨勢、建立多元交流管道，提升普羅大眾對現當代藝術的認知與參與，促使臺灣現當代藝術發展臻至蓬勃，全民藝術涵養更加豐沛，以期形成具有美感修為及文化思辨力的當代社會。</p>
       </div>
+    </div>
+    <h2 class="text-center font-size-bold p-4">館舍建築</h2>
+    <div class="row mb-4">
+      <div class="col-lg-5 building-img"></div>
+      <div class="col-md-7 d-flex">
+        <div class="d-flex align-items-center justify-content-center">
+          <ul>
+            <li>
+              <p class="text-center text-third font-size-light">來自法國的三星主廚說：生活必須是一件愉快的事情，這一切應該從你的早餐開始。</p>
+            </li>
+            <li>
+              <p class="text-center text-third font-size-light">您"的感覺外，也要在消費者的心中建立起"FITNESSMALL的早餐是專屬為我現做的"。</p>
+            </li>
+            <li>
+              <p class="text-center text-third font-size-light">您"的感覺外，也要在消費者的心中建立起"FITNESSMALL的早餐是專屬為我現做的"。</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="building-banner"></div>
     </div>
   </div>
 </template>

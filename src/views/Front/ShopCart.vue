@@ -1,5 +1,4 @@
 <template>
-  <FrontNavBar />
   <div class="container">
     <div class="row justify-content-center wrap">
       <div class="col-md-10 bg-white shadow shopcart-layout mb-5">
@@ -47,7 +46,6 @@
 </template>
 
 <script>
-import FrontNavBar from '@/components/FrontNavBar.vue'
 
 import emitter from '../../assets/javascript/emitter'
 
@@ -61,7 +59,6 @@ export default {
       }
     }
   },
-  components: { FrontNavBar },
   methods: {
     backToProducts () {
       this.$router.push('/')

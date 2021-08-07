@@ -11,9 +11,19 @@ const routes = [
         component: () => import('@/views/Front/Index.vue')
       },
       {
-        path: '/about',
+        path: 'about',
         name: 'aboutus',
         component: () => import('@/views/Front/About.vue')
+      },
+      {
+        path: 'shopcart',
+        name: 'shopcart',
+        component: () => import('@/views/Front/ShopCart.vue')
+      },
+      {
+        path: 'order',
+        name: 'order',
+        component: () => import('@/views/Front/Order.vue')
       }
     ]
   }

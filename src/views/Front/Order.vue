@@ -1,5 +1,4 @@
 <template>
-  <FrontNavBar />
   <div class="wrap container">
       <div class="row shadow p-4 mb-5">
           <div class="col-md-7">
@@ -88,8 +87,6 @@
 </template>
 
 <script>
-import FrontNavBar from '@/components/FrontNavBar.vue'
-
 export default {
   data () {
     return {
@@ -115,7 +112,6 @@ export default {
       console.log(n, o)
     }
   },
-  components: { FrontNavBar },
   methods: {
     backToShopCart () {
       this.$router.push('/shopcart')
