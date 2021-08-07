@@ -13,6 +13,30 @@
     </div>
   </div>
   <GassYouLike />
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col-md-5 place-img">
+      </div>
+      <div class="col-md-7 palce-info card-body-color">
+        <h2 class="text-center font-size-bold p-4">場所介紹</h2>
+        <ul class="d-flex justify-content-around mb-5">
+          <li>
+            <i class="bi bi-geo-fill d-flex justify-content-center" style="font-size: 40px"></i>
+            <h2>地點方便</h2>
+          </li>
+          <li>
+            <i class="bi bi-cash-stack d-flex justify-content-center" style="font-size: 40px"></i>
+            <h2>收費便宜</h2>
+          </li>
+          <li>
+            <i class="bi bi-camera d-flex justify-content-center" style="font-size: 40px"></i>
+            <h2>專業導覽</h2>
+          </li>
+        </ul>
+        <p class="text-center font-size-light">食物能夠傳遞喜悅與滿足。從蔬果產地、水質清洗到人工逐葉揀選，講究新鮮品質與食安衛生，無毒且口感水嫩清脆， 打造安心且獨一無二的輕食品，讓您在味蕾間，品嘗疏食鮮甜的感動與原味本質。打造安心且獨一無二的輕食品，讓您在味蕾間，品嘗疏食鮮甜的感動與原味本質</p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
