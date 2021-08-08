@@ -32,9 +32,7 @@
               <div class="card-body card-body-color">
                 <h5 class="card-title">{{ item.title }}</h5>
                 <p class="card-text">{{ item.description }}</p>
-                <!-- <p class="card-text"><small class="text-muted">$ {{ $toCurrency(item.origin_price) }}</small></p> -->
                 <p class="card-text"><small class="text-muted"><del>NT$ {{ $toCurrency(item.origin_price) }}</del>/ NT$ {{ $toCurrency(item.price) }}</small></p>
-                <!-- <p class="card-text">NT$ {{ $toCurrency(item.price) }}</p>、 -->
                 <div class="card-button d-flex align-item-end">
                   <router-link :to="`/product/${item.id}`">
                     <button type="button" class="btn btn-secondary mr-0">查看詳情</button>

@@ -39,7 +39,7 @@
     <h2 class="text-center font-size-bold p-4">館舍建築</h2>
     <div class="row mb-4">
       <div class="col-md-5 building-img"></div>
-      <div class="col-md-7 d-flex">
+      <div class="col-md-7 d-flex border-top border-end border-bottom border-third">
         <div class="d-flex align-items-center justify-content-center">
           <ul>
             <li>
