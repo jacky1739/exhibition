@@ -74,9 +74,18 @@ export default {
     }
   },
   methods: {
-    toProducts () {
-      window.scrollTo(0, 850)
+    getData () {
+      const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/products`
+      this.$http.get(url).then(res => {
+        if (res.data.success) {
+          this.products = res.data.products
+          console.log(this.products)
+        }
+      })
     }
+  },
+  created () {
+    this.getData()
   }
 }
 </script>

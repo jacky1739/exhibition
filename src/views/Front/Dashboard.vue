@@ -6,9 +6,7 @@
 
 <script>
 import FrontNavBar from '@/components/FrontNavBar.vue'
-// import Products from '@/components/Products.vue'
 import Footer from '@/components/Footer.vue'
-// import GassYouLike from '@/components/GassYouLike.vue'
 
 export default {
   data () {

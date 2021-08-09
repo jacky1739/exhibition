@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container wrap">
     <div class="row" id="toProducts">
       <h2 class="font-size-bold mb-4 text-center">本期所有展覽...</h2>
       <section class="category">
@@ -22,7 +22,7 @@
           </div>
         </div>
       </section>
-      <div class="col-md-12" v-for="item in filterData" :key="item">
+      <div class="col-md-12 mb-5" v-for="item in filterData" :key="item">
         <div class="card mb-3">
           <div class="row g-0">
             <div class="col-md-4">
