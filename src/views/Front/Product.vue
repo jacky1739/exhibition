@@ -1,15 +1,16 @@
 <template>
   <div class="container">
-      <FrontNavBar class="mb-4" />
-      <div class="row align-items-center">
+      <div class="row align-items-center mb-5">
         <div class="mb-4">
           <span class="input-group-addon"><button class="btn btn-secondary btn-sm" type="button" @click.prevent="backToProducts"><i class="bi bi-arrow-left"></i></button></span>
           <span class="ml-1 font-size-light">返回</span>
         </div>
-        <div class="col-md-6">
-          <img class="checkOut-image" :src="product.imagesUrl[1]" alt="...">
+        <div class="col-md-5 d-flex">
+          <div class="checkOut-image-box d-flex justify-content-center">
+            <img class="checkOut-image" :src="product.imageUrl" alt="">
+          </div>
         </div>
-        <div class="col-md-6">
+        <!-- <div class="col-md-6">
           <h2 class="fw-bold h1 product-title mb-1">{{ product.title }}</h2>
           <p class="mb-0 text-muted text-end text-sm-start"><del>NT$ {{ product.origin_price }}</del></p>
           <p class="h4 fw-bold text-end text-sm-start">NT$ {{ product.price }}</p>
@@ -33,11 +34,33 @@
               <a href="./checkout.html" class="text-nowrap btn btn-secondary w-100" @click.prevent="addToCart" :class="{ disabled : loadingStatus.loadingItem }">加入購物車</a>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="row my-4">
-        <div class="col-md-6">
+        </div> -->
+
+        <div class="col-md-7">
+          <h2 class="font-size-Regular mb-4">香水特展</h2>
           <p class="font-size-light">{{ product.description }}</p>
+          <p class="mb-0 text-muted text-end text-sm-start"><del>NT$ 1200</del></p>
+          <p class="h4 fw-bold text-end text-sm-start">NT$ 500</p>
+          <div class="row align-items-center">
+            <div class="col-6">
+              <div class="input-group my-3 bg-light rounded">
+                <div class="input-group-prepend">
+                  <button class="btn btn-outline-secondary border-0 py-2" @click.prevent="minus" type="button" id="button-addon1">
+                    <i class="bi bi-dash"></i>
+                  </button>
+                </div>
+                <input type="number" class="form-control border-0 text-center my-auto shadow-none bg-light" v-model.number="count" placeholder="" readonly="readonly" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary border-0 py-2" @click.prevent="add" type="button" id="button-addon2">
+                    <i class="bi bi-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <a href="./checkout.html" class="text-nowrap btn btn-secondary w-100">加入購物車</a>
+            </div>
+          </div>
         </div>
       </div>
       <h3 class="fw-bold">{{ product.content }}</h3>
@@ -82,13 +105,9 @@
         </div>
       </div>
     </div>
-    <Footer />
 </template>
 
 <script>
-import FrontNavBar from '@/components/FrontNavBar.vue'
-import Footer from '@/components/Footer.vue'
-
 import emitter from '../../assets/javascript/emitter'
 
 export default {
@@ -103,7 +122,6 @@ export default {
       }
     }
   },
-  components: { FrontNavBar, Footer },
   methods: {
     backToProducts () {
       this.$router.push('/')
