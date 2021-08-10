@@ -34,7 +34,7 @@
                 <p class="card-text">{{ item.description }}</p>
                 <p class="card-text"><small class="text-muted"><del>NT$ {{ $toCurrency(item.origin_price) }}</del>/ NT$ {{ $toCurrency(item.price) }}</small></p>
                 <div class="card-button d-flex align-item-end">
-                  <router-link :to="`/product/${item.id}`">
+                  <router-link :to="`/singleproduct/${item.id}`">
                     <button type="button" class="btn btn-secondary mr-0">查看詳情</button>
                   </router-link>
                   <button type="button" class="btn btn-third border-secondary" @click.prevent="addToCart(item.id)" :disabled="loadingStatus.loadingItem === item.id">加入購物車</button>

@@ -31,9 +31,14 @@ const routes = [
         component: () => import('@/views/Front/Checkout.vue')
       },
       {
-        path: 'test',
-        name: 'test',
-        component: () => import('@/views/Front/Test.vue')
+        path: 'allproducts',
+        name: 'allproducts',
+        component: () => import('@/views/Front/AllProducts.vue')
+      },
+      {
+        path: 'singleproduct/:id',
+        name: 'singleproduct',
+        component: () => import('@/views/Front/SingleProduct.vue')
       }
     ]
   },

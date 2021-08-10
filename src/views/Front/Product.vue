@@ -3,9 +3,9 @@
       <FrontNavBar class="mb-4" />
       <div class="row align-items-center">
         <div class="mb-4">
-              <span class="input-group-addon"><button class="btn btn-secondary btn-sm" type="button" @click.prevent="backToProducts"><i class="bi bi-arrow-left"></i></button></span>
-              <span class="ml-1 font-size-light">返回</span>
-          </div>
+          <span class="input-group-addon"><button class="btn btn-secondary btn-sm" type="button" @click.prevent="backToProducts"><i class="bi bi-arrow-left"></i></button></span>
+          <span class="ml-1 font-size-light">返回</span>
+        </div>
         <div class="col-md-6">
           <img class="checkOut-image" :src="product.imagesUrl[1]" alt="...">
         </div>
