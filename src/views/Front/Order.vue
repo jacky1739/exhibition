@@ -1,4 +1,5 @@
 <template>
+  <Loading :isLoading="Loading" />
   <div class="wrap container">
       <div class="row shadow p-4 mb-5">
           <div class="col-md-7">
@@ -104,7 +105,8 @@ export default {
       },
       orderId: '',
       couponCode: '',
-      couponSuccess: false
+      couponSuccess: false,
+      Loading: false
     }
   },
   watch: {
@@ -136,12 +138,14 @@ export default {
       })
     },
     getCartList () {
+      this.Loading = true
       const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart`
       this.$http.get(url).then(res => {
         if (res.data.success) {
           console.log(res.data.data)
           this.cart = res.data.data
           this.final_total = res.data.data.final_total
+          this.Loading = false
         }
       }).catch(err => {
         alert(err.message)

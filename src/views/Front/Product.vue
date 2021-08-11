@@ -33,7 +33,7 @@
               </div>
             </div>
             <div class="col-6">
-              <a href="./checkout.html" class="text-nowrap btn btn-secondary w-100">加入購物車</a>
+              <a href="#" role="button" @click.prevent="addToCart" class="text-nowrap btn btn-secondary w-100">加入購物車</a>
             </div>
           </div>
         </div>

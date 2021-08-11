@@ -1,4 +1,5 @@
 <template>
+  <Loading :isLoading="Loading" />
   <div class="wrap container">
       <div class="row shadow p-4 mb-5">
         <div class="col-md-7">
@@ -60,19 +61,21 @@ export default {
       },
       orderId: '',
       sum: 0,
-      isLoading: false,
       isPaid: false,
-      pay: '尚未付款'
+      pay: '尚未付款',
+      Loading: false
     }
   },
   methods: {
     getOrder () {
+      this.Loading = true
       this.orderId = this.$route.params.orderId
       const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/order/${this.orderId}`
       this.$http.get(url).then(res => {
         this.allProducts = res.data.order.products
         this.sum = res.data.order.total
-        console.log(res.data.order)
+        // console.log(res.data.order)
+        this.Loading = false
       }).catch(err => {
         alert(err.message)
       })
@@ -92,7 +95,7 @@ export default {
       this.$router.push('/')
     }
   },
-  created () {
+  mounted () {
     this.getOrder()
   }
 }
