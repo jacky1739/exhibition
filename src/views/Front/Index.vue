@@ -3,8 +3,8 @@
     <div class="container d-flex align-items-center justify-content-center">
       <div class="row">
         <div class="col-lg-10 col-md-8">
-          <h2 class="h2 font-color-secondary mb-4 font-size-bold wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">台北當代藝術展</h2>
-          <p class="h3 font-color-secondary mb-4 font-size-Regular wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.5s">01 JUN - 31 OCT</p>
+          <h2 class="h2 font-color-secondary mb-4 font-size-bold wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">台北當代藝術展</h2>
+          <p class="h3 font-color-secondary mb-4 font-size-Regular wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">01 JUN - 31 OCT</p>
           <div class="d-grid gap-2">
             <a class="btn btn-outline-secondary rounded-pill font-color-secondary rounded-pill border-white wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.5s" href="#/about">關於我們</a>
           </div>
@@ -14,7 +14,7 @@
   </div>
   <GassYouLike />
   <div class="container mb-5">
-    <div class="row mb-4">
+    <div class="row mb-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
       <div class="col-md-5 place-img"></div>
       <div class="col-md-7 card-body-color">
         <h2 class="text-center font-size-bold p-4">場所介紹</h2>
@@ -36,8 +36,8 @@
       </div>
     </div>
 
-    <h2 class="text-center font-size-bold p-4">館舍建築</h2>
-    <div class="row mb-4">
+    <h2 class="text-center font-size-bold p-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">館舍建築</h2>
+    <div class="row mb-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
       <div class="col-md-5 building-img"></div>
       <div class="col-md-7 d-flex border-top border-end border-bottom border-third">
         <div class="d-flex align-items-center justify-content-center">
@@ -56,7 +56,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="building-banner"></div>
+      <div class="building-banner wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s"></div>
     </div>
   </div>
 </template>
