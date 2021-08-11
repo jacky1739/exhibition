@@ -44,7 +44,7 @@ export default {
           console.log(res.data.success)
           const { token, expired } = res.data
           document.cookie = `hexToken=${token};expires=${new Date(expired)};`
-          this.$router.push('/admin')
+          this.$router.push('/backend/admin')
         } else {
           alert('請輸入正確的帳號密碼')
         }

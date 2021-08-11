@@ -8,6 +8,7 @@ const routes = [
     children: [
       {
         path: '',
+        name: '',
         component: () => import('@/views/Front/Index.vue')
       },
       {
@@ -53,9 +54,29 @@ const routes = [
     component: () => import('@/views/Admin/Login.vue')
   },
   {
+    path: '/backend',
+    component: () => import('@/views/Admin/Backend.vue'),
+    children: [
+      {
+        path: 'admin',
+        name: 'admin',
+        component: () => import('@/views/Admin/Admin.vue')
+      },
+      {
+        path: 'coupon',
+        name: 'coupon',
+        component: () => import('@/views/Admin/Coupon.vue')
+      }
+    ]
+  },
+  {
     path: '/admin',
     component: () => import('@/views/Admin/Admin.vue')
   }
+  // {
+  //   path: '/coupon',
+  //   component: () => import('@/views/Admin/Coupon.vue')
+  // }
 ]
 
 // const routes = [

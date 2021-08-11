@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <button type="button" @click.prevent="toCoupon">優惠券</button>
     <div class="d-flex justify-content-end mt-4">
     </div>
     <table class="table">
@@ -105,9 +104,6 @@ export default {
       }).catch(err => {
         alert(err.message)
       })
-    },
-    toCoupon () {
-      this.$router.push('/coupon')
     }
   },
   mounted () {
