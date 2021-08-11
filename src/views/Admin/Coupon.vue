@@ -1,4 +1,5 @@
 <template>
+  <Loading :isLoading="Loading" />
   <div>
     <div class="sticky-top bg-white ps-2 py-3 mb-1">
       <h2 class="h3">優惠券列表</h2>
@@ -57,6 +58,7 @@ export default {
   data () {
     return {
       coupons: [],
+      Loading: false,
       tempCoupon: {
         title: '',
         is_enabled: 1,
@@ -68,11 +70,13 @@ export default {
   },
   methods: {
     getCoupons () {
+      this.Loading = true
       const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/admin/coupons`
       this.axios.get(url).then((res) => {
         console.log(res)
         if (res.data.success) {
           this.coupons = res.data.coupons
+          this.Loading = false
         }
       }).catch(() => {
         this.swal('無法取得優惠券資料喔～快去看什麼問題吧！', 'error')

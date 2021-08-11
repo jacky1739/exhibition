@@ -1,4 +1,5 @@
 <template>
+  <Loading :isLoading="Loading" />
   <div class="container">
     <div class="d-flex justify-content-end mt-4">
     </div>
@@ -66,7 +67,7 @@ export default {
       pagination: {},
       tempProduct: {},
       isNew: false,
-      isLoading: false,
+      Loading: false,
       status: {
         fileUploading: false
       },
@@ -78,13 +79,15 @@ export default {
   },
   methods: {
     getOrders (page) {
+      this.Loading = true
       const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/admin/orders?page=${page}`
       this.$http.get(url).then((res) => {
         if (res.data.success) {
           this.orders = res.data
           this.totalPages = res.data.pagination.total_pages
           this.pagination = res.data.pagination
-          console.log(this.orders)
+          // console.log(this.orders)
+          this.Loading = false
         }
       }).catch(err => {
         alert(err.message)

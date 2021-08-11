@@ -1,4 +1,5 @@
 <template>
+  <Loading :isLoading="Loading" />
   <div class="container">
       <div class="row align-items-center mb-5">
         <div class="mb-4">
@@ -64,6 +65,7 @@ export default {
   data () {
     return {
       count: 1,
+      Loading: false,
       product: {
         imagesUrl: []
       },
@@ -74,7 +76,7 @@ export default {
   },
   methods: {
     backToProducts () {
-      this.$router.push('/')
+      this.$router.push('/allproducts')
     },
     add () {
       console.log('add')
@@ -95,12 +97,14 @@ export default {
       this.$router.push('/checkout/form')
     },
     getSingleProduct () {
+      this.Loading = true
       const id = this.$route.params.id
       const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/product/${id}`
       this.$http.get(url).then(res => {
         if (res.data.success) {
           this.product = res.data.product
           console.log(this.product)
+          this.Loading = false
         }
       }).catch(err => {
         alert(err.message)

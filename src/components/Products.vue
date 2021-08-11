@@ -1,5 +1,5 @@
 <template>
-  <div class="container wrap">
+  <div class="container wrap min-height">
     <div class="row" id="toProducts">
       <h2 class="font-size-bold mb-4 text-center">本期所有展覽...</h2>
       <section class="category">
@@ -136,7 +136,7 @@ export default {
     tospecial () {
       this.allProducts = this.tospecial
       this.filterData = this.tospecial
-      console.log(this.allProducts)
+      // console.log(this.allProducts)
       this.getCategories()
     }
   },

@@ -1,4 +1,5 @@
 <template>
+  <Loading :isLoading="Loading" />
   <div class="container">
     <div class="row justify-content-center wrap">
       <div class="col-md-10 bg-white shadow shopcart-layout mb-5">
@@ -56,7 +57,8 @@ export default {
       totalPrice: {},
       loadingStatus: {
         loadingItem: ''
-      }
+      },
+      Loading: false
     }
   },
   methods: {
@@ -64,12 +66,14 @@ export default {
       this.$router.push('/')
     },
     getCartList () {
+      this.Loading = true
       const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart`
       this.$http.get(url).then(res => {
         if (res.data.success) {
           // console.log(res.data.data.carts)
           this.cart = res.data.data
           this.totalPrice = res.data.data.final_total
+          this.Loading = false
           // console.log(this.totalPrice)
         }
       }).catch(err => {

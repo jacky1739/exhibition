@@ -1,4 +1,5 @@
 <template>
+  <Loading :isLoading="Loading" />
   <div class="banner d-flex">
     <div class="container d-flex align-items-center justify-content-center">
       <div class="row">
@@ -70,15 +71,18 @@ export default {
   },
   data () {
     return {
-      products: []
+      products: [],
+      Loading: false
     }
   },
   methods: {
     getData () {
+      this.Loading = true
       const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/products`
       this.$http.get(url).then(res => {
         if (res.data.success) {
           this.products = res.data.products
+          this.Loading = false
           console.log(this.products)
         }
       })

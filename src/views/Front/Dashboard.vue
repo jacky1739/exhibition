@@ -1,6 +1,6 @@
 <template>
   <FrontNavBar />
-  <router-view class="min-height" />
+  <router-view />
   <Footer />
 </template>
 

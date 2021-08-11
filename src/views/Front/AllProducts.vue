@@ -1,4 +1,5 @@
 <template>
+  <Loading :isLoading="Loading" />
   <Products :tospecial="products" />
 </template>
 
@@ -9,21 +10,24 @@ export default {
   components: { Products },
   data () {
     return {
-      products: []
+      products: [],
+      Loading: false
     }
   },
   methods: {
     getData () {
+      this.Loading = true
       const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/products`
       this.$http.get(url).then(res => {
         if (res.data.success) {
           this.products = res.data.products
-          console.log(this.products)
+          this.Loading = false
+          // console.log(this.products)
         }
       })
     }
   },
-  created () {
+  mounted () {
     this.getData()
   }
 }
