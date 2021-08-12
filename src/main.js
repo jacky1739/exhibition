@@ -4,8 +4,6 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 
 // loading
-// import Loading from 'vue3-loading-overlay'
-// import 'vue3-loading-overlay/dist/vue3-loading-overlay.css'
 import Loading from '@/components/Loading.vue'
 
 // vee-validate

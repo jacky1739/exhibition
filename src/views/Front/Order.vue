@@ -127,11 +127,6 @@ export default {
       Loading: false
     }
   },
-  watch: {
-    // forms (n, o) {
-    //   console.log(n, o)
-    // }
-  },
   methods: {
     backToShopCart () {
       this.$router.push('/shopcart')

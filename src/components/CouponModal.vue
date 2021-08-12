@@ -1,6 +1,6 @@
 <template>
   <div class="modal fade" id="couponModal" tabindex="-1" role="dialog"
-       aria-labelledby="exampleModalLabel" aria-hidden="true" ref="modal">
+      aria-labelledby="exampleModalLabel" aria-hidden="true" ref="modal">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
