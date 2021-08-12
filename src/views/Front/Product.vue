@@ -86,9 +86,12 @@ export default {
     minus () {
       if (this.count > 1) {
         this.count -= 1
-        // console.log(this.count)
       } else {
-        alert('票數不可低於1')
+        this.$swal({
+          position: 'top',
+          title: '票數不可低於1',
+          icon: 'error'
+        })
       }
     },
     toPurchase () {
@@ -111,7 +114,6 @@ export default {
       })
     },
     addToCart () {
-    //   console.log('click')
       this.loadingStatus.loadingItem = true
       const cart = {
         product_id: this.product.id,

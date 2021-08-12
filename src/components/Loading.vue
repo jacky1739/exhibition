@@ -18,8 +18,7 @@ export default {
     }
   },
   watch: {
-    isLoading (newdata, olddata) {
-      console.log(olddata, newdata)
+    isLoading () {
       this.loading = this.isLoading
     }
   }

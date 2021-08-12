@@ -71,7 +71,7 @@ export default {
     }
   },
   watch: {
-    orderdetail (n) {
+    orderdetail () {
       this.detail = this.orderdetail.products
       console.log(this.detail)
     }

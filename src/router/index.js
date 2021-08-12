@@ -55,6 +55,7 @@ const routes = [
   },
   {
     path: '/backend',
+    name: 'backend',
     component: () => import('@/views/Admin/Backend.vue'),
     children: [
       {
@@ -68,56 +69,8 @@ const routes = [
         component: () => import('@/views/Admin/Coupon.vue')
       }
     ]
-  },
-  {
-    path: '/admin',
-    component: () => import('@/views/Admin/Admin.vue')
   }
-  // {
-  //   path: '/coupon',
-  //   component: () => import('@/views/Admin/Coupon.vue')
-  // }
 ]
-
-// const routes = [
-//   {
-//     path: '/',
-//     name: 'Home',
-//     component: () => import('@/views/Front/Dashboard.vue'),
-//     children: [
-//       {
-//         path: '',
-//         component: () => import('@/views/Front/Index.vue')
-//       }
-//     ]
-//   },
-//   {
-//     path: '/shopcart',
-//     component: () => import('@/views/Front/ShopCart.vue')
-//   },
-//   {
-//     path: '/product/:id',
-//     name: 'product',
-//     component: () => import('@/views/Front/Product.vue')
-//   },
-//   {
-//     path: '/login',
-//     component: () => import('@/views/Admin/Login.vue')
-//   },
-//   {
-//     path: '/admin',
-//     component: () => import('@/views/Admin/Admin.vue')
-//   },
-//   {
-//     path: '/coupon',
-//     component: () => import('@/views/Admin/Coupon.vue')
-//   },
-//   {
-//     path: '/:pathMatch(.*)*',
-//     name: 'NotFound',
-//     component: () => import('@/views/Front/NotFound.vue')
-//   },
-// ]
 
 const router = createRouter({
   history: createWebHashHistory(),

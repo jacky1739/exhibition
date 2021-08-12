@@ -27,7 +27,7 @@ export default {
     }
   },
   watch: {
-    pages (n) {
+    pages () {
       this.pagination = this.pages
     }
   }

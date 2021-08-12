@@ -128,9 +128,9 @@ export default {
     }
   },
   watch: {
-    forms (n, o) {
-      console.log(n, o)
-    }
+    // forms (n, o) {
+    //   console.log(n, o)
+    // }
   },
   methods: {
     backToShopCart () {

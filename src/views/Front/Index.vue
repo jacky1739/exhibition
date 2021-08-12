@@ -13,7 +13,7 @@
       </div>
     </div>
   </div>
-  <GassYouLike />
+  <GuessYouLike />
   <div class="container mb-5">
     <div class="row mb-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
       <div class="col-md-5 place-img"></div>
@@ -63,11 +63,11 @@
 </template>
 
 <script>
-import GassYouLike from '@/components/GassYouLike.vue'
+import GuessYouLike from '@/components/GuessYouLike.vue'
 
 export default {
   components: {
-    GassYouLike
+    GuessYouLike
   },
   data () {
     return {

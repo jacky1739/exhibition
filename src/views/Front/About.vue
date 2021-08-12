@@ -14,7 +14,7 @@
     <div class="row d-flex jutify-content-center">
       <div class="col-md-12">
         <p class="text-center text-secondary font-size-Regular">參觀展覽的美好時光</p>
-        <ul>
+        <ul class="mb-4">
           <li>
             <p class="text-center text-third font-size-light">2021 年 7 月，Jacky Hu 創立了 EXHIBITION ‧</p>
           </li>

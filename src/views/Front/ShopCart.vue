@@ -159,9 +159,9 @@ export default {
     }
   },
   watch: {
-    cart (n, o) {
-      console.log(n.carts.length, o)
-      if (n.carts.length === 0) {
+    cart (newData, oldData) {
+      // console.log(newData.carts.length, oldData)
+      if (newData.carts.length === 0) {
         this.$swal({
           position: 'top',
           title: '購物車已經是空的，請重新加入購物車',

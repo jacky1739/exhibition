@@ -21,7 +21,7 @@
           </div>
         </div>
         <div class="col-md-7">
-          <h2 class="">訂單成立</h2>
+          <h2>訂單成立</h2>
           <p class="font-size-light">感謝您訂購本次的展覽，祝您參觀愉快</p>
           <div class="checkout-img"></div>
         </div>
@@ -50,7 +50,7 @@
               <div class="w-100">
                 <div class="d-flex justify-content-between border-top pt-4">
                   <p class="font-size-Regular">付款狀態</p>
-                  <p class="font-size-Regular" :class="{ 'text-success': isPaid === true}">{{ pay }}</p>
+                  <p class="font-size-Regular" :class="{ 'text-success': isPaid === true }">{{ pay }}</p>
                 </div>
               </div>
             </div>
@@ -117,5 +117,4 @@ export default {
     this.getOrder()
   }
 }
-// checkout/-MesLJwtzkFhQ5Zjnmg7
 </script>
