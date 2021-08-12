@@ -4,6 +4,24 @@
     <div class="row justify-content-center wrap">
       <div class="col-md-10 bg-white shadow shopcart-layout mb-5">
         <div class="cart p-3">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-5">
+              <ul class="d-flex justify-content-between" style="margin-bottom: 0px;">
+                <li class="position-relative">
+                  <p class="circle d-flex justify-content-center bg-secondary rounded-circle mb-2 text-white py-2 m0-auto">1</p>
+                  <p class="font-size-light">購物車</p>
+                </li>
+                <li>
+                  <p class="circle d-flex justify-content-center bg-third text-black rounded-circle mb-2 border border-secondary py-2 m0-auto">2</p>
+                  <p class="font-size-light">填寫資料</p>
+                </li>
+                <li>
+                  <p class="circle d-flex justify-content-center bg-third text-black rounded-circle mb-2 border border-secondary py-2 m0-auto">3</p>
+                  <p class="font-size-light">確認訂單</p>
+                </li>
+              </ul>
+            </div>
+          </div>
           <div class="mt-4 mb-3">
             <span class="input-group-addon"><button class="btn btn-secondary btn-sm" type="button" @click.prevent="backToProducts"><i class="bi bi-arrow-left"></i></button></span>
             <span class="ml-1 font-size-light">返回</span>

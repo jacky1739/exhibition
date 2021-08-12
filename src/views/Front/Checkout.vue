@@ -2,6 +2,24 @@
   <Loading :isLoading="Loading" />
   <div class="wrap container">
       <div class="row shadow p-4 mb-5">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-5">
+            <ul class="d-flex justify-content-between" style="margin-bottom: 0px;">
+              <li>
+                <p class="circle d-flex justify-content-center bg-third text-black rounded-circle mb-2 border border-secondary py-2 m0-auto">1</p>
+                <p class="font-size-light">購物車</p>
+              </li>
+              <li>
+                <p class="circle d-flex justify-content-center bg-third text-black rounded-circle mb-2 border border-secondary py-2 m0-auto">2</p>
+                <p class="font-size-light">填寫資料</p>
+              </li>
+              <li class="position-relative">
+                <p class="circle d-flex justify-content-center bg-secondary rounded-circle mb-2 text-white py-2 m0-auto">3</p>
+                <p class="font-size-light">確認訂單</p>
+              </li>
+            </ul>
+          </div>
+        </div>
         <div class="col-md-7">
           <h2 class="">訂單成立</h2>
           <p class="font-size-light">感謝您訂購本次的展覽，祝您參觀愉快</p>
@@ -43,7 +61,7 @@
             </div>
             <div class="mt-4 mb-3">
               <span class="input-group-addon"><button class="btn btn-secondary btn-sm" type="button" @click.prevent="backToProducts"><i class="bi bi-arrow-left"></i></button></span>
-              <span class="ml-1 font-size-light">返回首頁</span>
+              <span class="ml-1 font-size-light">返回展覽</span>
             </div>
         </div>
       </div>
@@ -92,7 +110,7 @@ export default {
       })
     },
     backToProducts () {
-      this.$router.push('/')
+      this.$router.push('/allproducts')
     }
   },
   mounted () {
