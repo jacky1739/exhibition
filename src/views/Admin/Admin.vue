@@ -5,25 +5,25 @@
     </div>
     <table class="table">
       <thead>
-            <tr>
-              <th width="120">
-                姓名
-              </th>
-              <th>地址</th>
-              <th width="120">
-                訂單ID
-              </th>
-              <th width="120">
-                金額
-              </th>
-              <th width="100">
-                是否啟用
-              </th>
-              <th width="120">
-                編輯
-              </th>
-            </tr>
-          </thead>
+        <tr>
+          <th width="120">
+            姓名
+          </th>
+          <th>地址</th>
+          <th width="120">
+            訂單ID
+          </th>
+          <th width="120">
+            金額
+          </th>
+          <th width="100">
+            是否啟用
+          </th>
+          <th width="120">
+            編輯
+          </th>
+        </tr>
+      </thead>
       <tbody>
         <tr v-for="item in orders.orders" :key="item">
          <td>{{ item.user.name }}</td>

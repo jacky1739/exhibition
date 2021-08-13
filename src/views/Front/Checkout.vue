@@ -4,7 +4,7 @@
       <div class="row shadow p-4 mb-5">
         <div class="row d-flex justify-content-center">
           <div class="col-md-5">
-            <ul class="d-flex justify-content-between" style="margin-bottom: 0px;">
+            <ul class="d-flex justify-content-between">
               <li>
                 <p class="circle d-flex justify-content-center bg-third text-black rounded-circle mb-2 border border-secondary py-2 m0-auto">1</p>
                 <p class="font-size-light">購物車</p>
@@ -29,7 +29,7 @@
             <div class="boder-primary p-3 mb-4">
               <h3 class="mb-4"><i class="bi bi-cart"></i> 訂單明細</h3>
               <div class="d-flex mb-4" v-for="item in allProducts" :key="item">
-                <img :src="item.product.imageUrl" class="orderImg mr-0">
+                <img :src="item.product.imageUrl" class="orderImg mr-0" alt="結帳頁面圖片">
                 <div class="w-100">
                   <div class="d-flex justify-content-between">
                     <p class="font-size-light">{{ item.product.title }}</p>
@@ -59,9 +59,9 @@
                 <button class="btn btn-secondary py-3 px-7" type="submit" @click.prevent="payOrder">確認結帳</button>
               </div>
             </div>
-            <div class="mt-4 mb-3">
-              <span class="input-group-addon"><button class="btn btn-secondary btn-sm" type="button" @click.prevent="backToProducts"><i class="bi bi-arrow-left"></i></button></span>
-              <span class="ml-1 font-size-light">返回展覽</span>
+            <div class="mt-4 mb-3 d-flex">
+              <button class="btn btn-secondary btn-sm" type="button" @click.prevent="backToProducts"><i class="bi bi-arrow-left"></i></button>
+              <p class="ml-1 font-size-light align-items-center" style="margin-bottom: 0px;">返回展覽</p>
             </div>
         </div>
       </div>
@@ -69,6 +69,7 @@
 </template>
 
 <script>
+import emitter from '../../assets/javascript/emitter'
 
 export default {
   data () {
@@ -106,6 +107,7 @@ export default {
           this.isPaid = res.data.success
           this.pay = '付款成功'
           this.$swal('付款成功!!')
+          emitter.emit('update-cart')
         }
       })
     },

@@ -12,8 +12,6 @@
       <div class="modal-content border-0">
         <div class="modal-header bg-dark text-white">
           <h5 class="modal-title" id="exampleModalLabel">
-            <!-- <span v-if="isNew">新增產品</span>
-            <span v-else>編輯產品</span> -->
           </h5>
           <button
             type="button"
@@ -48,12 +46,6 @@
           >
             確認
           </button>
-          <!-- <button
-            type="button"
-            class="btn btn-primary"
-          >
-            取消
-          </button> -->
         </div>
       </div>
     </div>

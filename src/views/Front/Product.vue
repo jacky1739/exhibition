@@ -2,13 +2,13 @@
   <Loading :isLoading="Loading" />
   <div class="container">
       <div class="row align-items-center mb-5">
-        <div class="mb-4">
-          <span class="input-group-addon"><button class="btn btn-secondary btn-sm" type="button" @click.prevent="backToProducts"><i class="bi bi-arrow-left"></i></button></span>
-          <span class="ml-1 font-size-light">返回</span>
+        <div class="mb-4 d-flex">
+          <button class="input-group-addon btn btn-secondary btn-sm" type="button" @click.prevent="backToProducts"><i class="bi bi-arrow-left"></i></button>
+          <p class="ml-1 font-size-light" style="margin-bottom: 0px;">返回</p>
         </div>
         <div class="col-md-5 d-flex">
           <div class="checkOut-image-box d-flex justify-content-center">
-            <img class="checkOut-image" :src="product.imageUrl" alt="">
+            <img class="checkOut-image" :src="product.imageUrl" alt="商品主要圖片">
           </div>
         </div>
         <div class="col-md-7">
@@ -42,17 +42,17 @@
 
       <div class="row d-flex justify-content-center">
         <div class="col-md-7 mb-5">
-          <img :src="product.imagesUrl[0]" alt="">
+          <img :src="product.imagesUrl[0]" alt="展場圖片-1">
         </div>
       </div>
       <div class="row d-flex justify-content-center">
         <div class="col-md-7 mb-5">
-          <img :src="product.imagesUrl[2]" alt="">
+          <img :src="product.imagesUrl[2]" alt="展場圖片-2">
         </div>
       </div>
       <div class="row d-flex justify-content-center">
         <div class="col-md-7 mb-5">
-          <img :src="product.imagesUrl[3]" alt="">
+          <img :src="product.imagesUrl[3]" alt="展場圖片-3">
         </div>
       </div>
     </div>

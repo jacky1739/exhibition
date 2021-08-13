@@ -22,14 +22,16 @@
       </div>
       <div class="col-md-7">
         <div class="mb-3">
-          <span class="input-group-addon"><button class="btn btn-secondary btn-sm" type="button" @click.prevent="backToShopCart"><i class="bi bi-arrow-left"></i></button></span>
-          <span class="ml-1 font-size-light">返回購物車</span>
+          <div class="d-flex">
+          <button class="input-group-addon btn btn-secondary btn-sm" type="button" @click.prevent="backToShopCart"><i class="bi bi-arrow-left"></i></button>
+          <p class="ml-1 font-size-light" style="margin-bottom: 0px;">返回購物車</p>
+          </div>
           <div class="col-md-12">
             <Form v-slot="{ errors }" class="pt-4">
               <div class="from-group mb-4">
                 <label for="email"><span class="text-danger">*</span> Email</label>
                 <Field id="email" name="email" type="text" class="form-control" :class="{ 'is-invalid': errors['email'] }"
-                  placeholder="請輸入Email" rules="required" v-model="forms.user.email">
+                  placeholder="請輸入Email" rules="email|required" v-model="forms.user.email">
                 </Field>
                 <Error-message name="email" class="invalid-feedback"></Error-message>
               </div>
@@ -43,7 +45,7 @@
               <div class="from-group mb-4">
                 <label for="tel"><span class="text-danger">*</span> 收件人電話</label>
                 <Field id="tel" name="電話" type="text" class="form-control" :class="{ 'is-invalid': errors['電話'] }"
-                  placeholder="請輸入電話" rules="required" v-model="forms.user.tel">
+                  placeholder="請輸入電話" :rules="isPhone" v-model="forms.user.tel">
                 </Field>
                 <Error-message name="電話" class="invalid-feedback"></Error-message>
               </div>
@@ -66,7 +68,7 @@
           <div class="boder-primary p-3 mb-4">
             <h3 class="mb-4"><i class="bi bi-cart"></i> 訂單明細</h3>
             <div class="d-flex mb-4" v-for="item in cart.carts" :key="item">
-              <img :src="item.product.imageUrl" class="orderImg mr-0">
+              <img :src="item.product.imageUrl" class="orderImg mr-0" alt="購物車商品圖片">
               <div class="w-100">
                 <div class="d-flex justify-content-between">
                   <p class="font-size-light">{{ item.product.title }}</p>
@@ -128,6 +130,10 @@ export default {
     }
   },
   methods: {
+    isPhone (value) {
+      const phoneNumber = /^(09)[0-9]{8}$/
+      return phoneNumber.test(value) ? true : '請輸入正確的電話號碼'
+    },
     backToShopCart () {
       this.$router.push('/shopcart')
     },

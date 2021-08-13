@@ -29,7 +29,7 @@
           <h2 class="font-weight-bold mb-3"><i class="bi bi-cart mr-0"></i><span class="mr-2">購物車清單</span></h2>
           <div class="cart-list d-flex bg-light mb-5" v-for="item in cart.carts" :key="item">
             <div class="img-fluid">
-              <img :src="item.product.imageUrl" class="cart-img mr-0">
+              <img :src="item.product.imageUrl" class="cart-img mr-0" alt="購物車圖片">
             </div>
             <div class="cart-content p-2">
               <div class="d-flex justify-content-between position-relative">

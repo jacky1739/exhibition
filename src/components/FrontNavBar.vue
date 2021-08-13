@@ -14,7 +14,7 @@
                     <div class="rounded-circle bg-danger text-white position-absolute px-2" style="right: -7px;
     top: 3px; font-size: 13px;">{{ cart.carts !== undefined  &&  cart.carts.length }}</div>
                   </a>
-                  <div class="dropdown-menu position-absolute wow bounceInRight" data-wow-duration="0.5s" data-wow-delay="0.25s" aria-labelledby="dropdownMenuLink" style="min-width: 350px; right: -15px; left: auto;">
+                  <div class="dropdown-menu position-absolute" aria-labelledby="dropdownMenuLink" style="min-width: 350px; right: -15px; left: auto;">
                     <div class="px-4 py-3">
                       <h6 class="font-size-light text-center border-bottom pb-2">已選擇商品</h6>
                       <table class="table mb-4">

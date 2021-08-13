@@ -26,7 +26,7 @@
         <div class="card mb-3">
           <div class="row g-0">
             <div class="col-md-4">
-              <img :src="item.imageUrl">
+              <img :src="item.imageUrl" alt="產品圖片">
             </div>
             <div class="col-md-7 d-flex position-relative">
               <div class="card-body card-body-color">
