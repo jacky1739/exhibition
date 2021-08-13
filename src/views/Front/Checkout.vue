@@ -1,5 +1,5 @@
 <template>
-  <Loading :isLoading="Loading" />
+  <Loading :isLoading="Loading"></Loading>
   <div class="wrap container">
       <div class="row shadow p-4 mb-5">
         <div class="row d-flex justify-content-center">
@@ -36,7 +36,7 @@
                     <p class="font-size-light">X {{ item.qty }}</p>
                   </div>
                   <div class="d-flex justify-content-between w-100">
-                    <p class="font-size-light">$ {{ item.product.price}}/ 張</p>
+                    <p class="font-size-light">$ {{ item.product.price }}/ 張</p>
                     <p class="font-size-light">$ {{ item.final_total }}</p>
                   </div>
                 </div>

@@ -1,5 +1,5 @@
 <template>
-  <Loading :isLoading="Loading" />
+  <Loading :isLoading="Loading"></Loading>
   <div class="container">
     <div class="d-flex justify-content-end mt-4">
     </div>

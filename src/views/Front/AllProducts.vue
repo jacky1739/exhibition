@@ -1,5 +1,5 @@
 <template>
-  <Loading :isLoading="Loading" />
+  <Loading :isLoading="Loading"></Loading>
   <Products :tospecial="products" />
 </template>
 

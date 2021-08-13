@@ -1,5 +1,5 @@
 <template>
-  <Loading :isLoading="Loading" />
+  <Loading :isLoading="Loading"></Loading>
   <div class="container">
     <div class="row justify-content-center wrap">
       <div class="col-md-10 bg-white shadow shopcart-layout mb-5">

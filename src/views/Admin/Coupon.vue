@@ -45,8 +45,7 @@
       </tbody>
     </table>
     <CouponModal ref="couponModal" :is-new="isNew" :coupon="tempCoupon" @update-coupon="updateCoupon"></CouponModal>
-    <DelModal ref="deleteModal">
-    </DelModal>
+    <DelModal ref="deleteModal"></DelModal>
   </div>
 </template>
 

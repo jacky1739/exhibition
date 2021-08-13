@@ -1,5 +1,5 @@
 <template>
-  <Loading :isLoading="Loading" />
+  <Loading :isLoading="Loading"></Loading>
   <div class="wrap container">
     <div class="row shadow p-4 mb-5">
       <div class="row d-flex justify-content-center">
@@ -181,7 +181,7 @@ export default {
         this.couponSuccess = true
         this.getCartList()
         this.$swal({
-          title: '價格以打折'
+          title: '價格已打折'
         })
       })
     }

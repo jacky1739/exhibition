@@ -1,5 +1,5 @@
 <template>
-  <Loading :isLoading="Loading" />
+  <Loading :isLoading="Loading"></Loading>
   <div class="container">
       <div class="row align-items-center mb-5">
         <div class="mb-4 d-flex">
