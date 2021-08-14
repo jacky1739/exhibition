@@ -23,8 +23,8 @@
       <div class="col-md-7">
         <div class="mb-3">
           <div class="d-flex">
-          <button class="input-group-addon btn btn-secondary btn-sm" type="button" @click.prevent="backToShopCart"><i class="bi bi-arrow-left"></i></button>
-          <p class="ml-1 font-size-light" style="margin-bottom: 0px;">返回購物車</p>
+            <button class="input-group-addon btn btn-secondary btn-sm" type="button" @click.prevent="backToShopCart"><i class="bi bi-arrow-left"></i></button>
+            <p class="ml-1 font-size-light" style="margin-bottom: 0px;">返回購物車</p>
           </div>
           <div class="col-md-12">
             <Form v-slot="{ errors }" class="pt-4">
