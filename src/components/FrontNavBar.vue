@@ -45,9 +45,9 @@
                           </tr>
                         </tbody>
                       </table>
-                      <a href="#/shopcart" class="btn btn-secondary d-block btn-tocart" :class="{ 'disabled': cartLength === 0 }">
+                      <router-link :to="'/shopcart'" class="btn btn-secondary d-block btn-tocart" :class="{ 'disabled': cartLength === 0 }">
                         點擊結帳
-                      </a>
+                      </router-link>
                     </div>
                   </div>
                 </li>

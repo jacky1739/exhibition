@@ -60,7 +60,9 @@
               </div>
             </div>
             <div class="mt-4 mb-3 d-flex">
-              <button class="btn btn-secondary btn-sm" type="button" @click.prevent="backToProducts"><i class="bi bi-arrow-left"></i></button>
+              <router-link :to="'/allproducts'">
+                <button class="btn btn-secondary btn-sm" type="button"><i class="bi bi-arrow-left"></i></button>
+              </router-link>
               <p class="ml-1 font-size-light align-items-center" style="margin-bottom: 0px;">返回展覽</p>
             </div>
         </div>
@@ -110,9 +112,6 @@ export default {
           emitter.emit('update-cart')
         }
       })
-    },
-    backToProducts () {
-      this.$router.push('/allproducts')
     }
   },
   mounted () {

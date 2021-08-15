@@ -23,7 +23,9 @@
             </div>
           </div>
           <div class="mt-4 mb-3 d-flex">
-            <button class="input-group-addon btn btn-secondary btn-sm" type="button" @click.prevent="backToProducts"><i class="bi bi-arrow-left"></i></button>
+            <router-link :to="'/allproducts'">
+              <button class="input-group-addon btn btn-secondary btn-sm" type="button"><i class="bi bi-arrow-left"></i></button>
+            </router-link>
             <p class="ml-1 font-size-light" style="margin-bottom: 0px;">返回</p>
           </div>
           <h2 class="font-weight-bold mb-3"><i class="bi bi-cart mr-0"></i><span class="mr-2">購物車清單</span></h2>
@@ -53,9 +55,11 @@
           </div>
           <div class="row justify-content-center mb-5">
             <div class="col-md-4">
-              <div class="d-grid gap-2">
-                <button class="btn btn-secondary d-flex justify-content-center" @click.prevent="toOrder" type="button">確認訂單</button>
-              </div>
+              <router-link class="text-decoration-none" :to="'/order'">
+                <div class="d-grid gap-2">
+                  <button class="btn btn-secondary d-flex justify-content-center" type="button">確認訂單</button>
+                </div>
+              </router-link>
             </div>
           </div>
         </div>
@@ -81,7 +85,7 @@ export default {
   },
   methods: {
     backToProducts () {
-      this.$router.push('/')
+      this.$router.push('/allproducts')
     },
     getCartList () {
       this.Loading = true
@@ -153,9 +157,6 @@ export default {
           icon: 'error'
         })
       }
-    },
-    toOrder () {
-      this.$router.push('/order')
     }
   },
   watch: {

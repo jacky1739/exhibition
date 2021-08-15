@@ -21,7 +21,7 @@
     </div>
     <div class="row">
       <div class="d-grid gap-2 col-6 mx-auto">
-        <a href="#/allproducts" role="button" class="btn btn-secondary rounded-pill wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.25s">瀏覽本期全部展覽</a>
+        <router-link :to="'/allproducts'" role="button" class="btn btn-secondary rounded-pill wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.25s">瀏覽本期全部展覽</router-link>
       </div>
     </div>
   </div>

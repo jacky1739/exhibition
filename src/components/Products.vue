@@ -1,7 +1,7 @@
 <template>
   <div class="container wrap min-height">
     <div class="row" id="toProducts">
-      <h2 class="font-size-bold mb-4 text-center">本期所有展覽...</h2>
+      <h2 class="font-size-bold mb-4 text-center">1/1 ~ 9/2 所有展覽...</h2>
       <section class="category">
         <div class="container">
           <div class="row">
@@ -22,43 +22,24 @@
           </div>
         </div>
       </section>
-      <!-- <div class="col-md-12 mb-5" v-for="item in filterData" :key="item">
-        <div class="card mb-3">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img :src="item.imageUrl" alt="產品圖片">
-            </div>
-            <div class="col-md-7 d-flex position-relative">
-              <div class="card-body card-body-color">
-                <h5 class="card-title">{{ item.title }}</h5>
-                <p class="card-text">{{ item.description }}</p>
-                <p class="card-text"><small class="text-muted"><del>NT$ {{ $toCurrency(item.origin_price) }}</del>/ NT$ {{ $toCurrency(item.price) }}</small></p>
-                <div class="card-button d-flex align-item-end">
-                  <router-link :to="`/product/${item.id}`">
-                    <button type="button" class="btn btn-secondary mr-0">查看詳情</button>
-                  </router-link>
-                    <button type="button" class="btn btn-third border-secondary" @click.prevent="addToCart(item.id)" :disabled="loadingStatus.loadingItem === item.id">加入購物車</button>
-                </div>
-              </div>
-            </div>
-            <div class="date-mobile col-md-1 d-flex align-items-center justify-content-center card-body-color">
-              <p class="date">1/1 ~ 9/2</p>
-            </div>
-          </div>
-        </div>
-      </div> -->
-      <div class="row mb-5" v-for="item in filterData" :key="item">
-        <div class="col-md-10 m0-auto d-flex">
+      <div class="row mb-5 ml-0 mr-0" v-for="item in filterData" :key="item">
+        <div class="col-md-10 m0-auto d-flex products-card">
           <div class="col-md-4">
             <img :src="item.imageUrl" alt="產品圖片">
           </div>
-          <div class="col-md-8 p-4">
-            <h2 class="mb-3">{{ item.title }}</h2>
-            <p class="ellipsis font-size-light">{{ item.description }}</p>
-            <p class="card-text"><small class="text-muted"><del>NT$ {{ $toCurrency(item.origin_price) }}</del>/ NT$ {{ $toCurrency(item.price) }}</small></p>
-            <div class="d-flex align-items-end">
-              <button type="button" class="btn btn-secondary mr-0">查看詳情</button>
-              <button type="button" class="btn btn-third border-secondary" @click.prevent="addToCart(item.id)" :disabled="loadingStatus.loadingItem === item.id">加入購物車</button>
+          <div class="col-md-8 product-card-body d-flex justify-content-between flex-column border card-body-color">
+            <div>
+              <h2 class="product-card-title">{{ item.title }}</h2>
+              <p class="ellipsis product-card-text">{{ item.description }}</p>
+            </div>
+            <div>
+              <p class="card-price"><small class="text-muted"><del>NT$ {{ $toCurrency(item.origin_price) }}</del>/ NT$ {{ $toCurrency(item.price) }}</small></p>
+              <div class="d-flex">
+                <router-link :to="`/product/${item.id}`">
+                  <button type="button" class="btn btn-secondary mr-0">查看詳情</button>
+                </router-link>
+                <button type="button" class="btn btn-third border-secondary" @click="addToCart(item.id)" :disabled="loadingStatus.loadingItem === item.id">加入購物車</button>
+              </div>
             </div>
           </div>
         </div>
