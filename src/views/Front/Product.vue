@@ -33,7 +33,7 @@
               </div>
             </div>
             <div class="col-6">
-              <a href="#" role="button" @click.prevent="addToCart" class="text-nowrap btn btn-secondary w-100">加入購物車</a>
+              <button type="button" @click.prevent="addToCart" :disabled="loadingStatus.loadingItem === true" class="text-nowrap btn btn-secondary w-100">加入購物車</button>
             </div>
           </div>
         </div>
