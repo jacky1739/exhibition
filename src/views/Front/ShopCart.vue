@@ -36,14 +36,14 @@
             <div class="cart-content p-2">
               <div class="d-flex justify-content-between position-relative">
                 <p class="font-size-light">{{ item.product.title }} / 一張 {{item.product.price}}</p>
-                <button class="btn btn-third btn-sm delete-icon" @click.prevent="sweetAlertConfirm(item.id)" type="button"><i class="bi bi-trash" style="font-size: 15px;"></i></button>
+                <button class="btn btn-third btn-sm delete-icon" @click="sweetAlertConfirm(item.id)" type="button"><i class="bi bi-trash" style="font-size: 15px;"></i></button>
               </div>
               <p class="ellipsis font-size-light">{{ item.product.description}}</p>
               <div class="d-flex justify-content-between">
                 <div class="d-flex cart-input-group">
-                  <button type="button" class="btn btn-secondary btn-sm px-2" @click.prevent="updateCart(item.id, item.qty-1)" :disabled="loadingStatus.loadingItem === item.id"><i class="bi bi-dash"></i></button>
+                  <button type="button" class="btn btn-secondary btn-sm px-2" @click="updateCart(item.id, item.qty-1)" :disabled="loadingStatus.loadingItem === item.id"><i class="bi bi-dash"></i></button>
                   <input class="form-control rounded-0" readonly="readonly" placeholder="1" v-model.number="item.qty">
-                  <button type="button" class="btn btn-secondary btn-sm px-2" @click.prevent="updateCart(item.id, item.qty+1)" :disabled="loadingStatus.loadingItem === item.id"><i class="bi bi-plus"></i></button>
+                  <button type="button" class="btn btn-secondary btn-sm px-2" @click="updateCart(item.id, item.qty+1)" :disabled="loadingStatus.loadingItem === item.id"><i class="bi bi-plus"></i></button>
                 </div>
                 <p class="font-size-light">總共$ {{ item.total }}</p>
               </div>
@@ -116,7 +116,6 @@ export default {
       })
     },
     deleteCart (id) {
-      console.log(id, this.cart.carts.length)
       const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart/${id}`
       this.$http.delete(url).then(res => {
         if (res.data.success) {
@@ -139,7 +138,6 @@ export default {
         qty: qty
       }
       if (qty >= 1) {
-        console.log(id, qty)
         this.$http.put(url, { data }).then(res => {
           // console.log(res)
           if (res.data.success) {

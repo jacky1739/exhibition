@@ -3,7 +3,7 @@
   <div class="container">
       <div class="row align-items-center mb-5">
         <div class="mb-4 d-flex">
-          <button class="input-group-addon btn btn-secondary btn-sm" type="button" @click.prevent="backToProducts"><i class="bi bi-arrow-left"></i></button>
+          <button class="input-group-addon btn btn-secondary btn-sm" type="button" @click="backToProducts"><i class="bi bi-arrow-left"></i></button>
           <p class="ml-1 font-size-light" style="margin-bottom: 0px;">返回</p>
         </div>
         <div class="col-md-5 d-flex">
@@ -20,20 +20,20 @@
             <div class="col-6">
               <div class="input-group my-3 bg-light rounded">
                 <div class="input-group-prepend">
-                  <button class="btn btn-outline-secondary border-0 py-2" @click.prevent="minus" type="button" id="button-addon1">
+                  <button class="btn btn-outline-secondary border-0 py-2" @click="minus" type="button" id="button-addon1">
                     <i class="bi bi-dash"></i>
                   </button>
                 </div>
                 <input type="number" class="form-control border-0 text-center my-auto shadow-none bg-light" v-model.number="count" placeholder="" readonly="readonly" aria-label="Example text with button addon" aria-describedby="button-addon1">
                 <div class="input-group-append">
-                  <button class="btn btn-outline-secondary border-0 py-2" @click.prevent="add" type="button" id="button-addon2">
+                  <button class="btn btn-outline-secondary border-0 py-2" @click="add" type="button" id="button-addon2">
                     <i class="bi bi-plus"></i>
                   </button>
                 </div>
               </div>
             </div>
             <div class="col-6">
-              <button type="button" @click.prevent="addToCart" :disabled="loadingStatus.loadingItem === true" class="text-nowrap btn btn-secondary w-100">加入購物車</button>
+              <button type="button" @click="addToCart" :disabled="loadingStatus.loadingItem === true" class="text-nowrap btn btn-secondary w-100">加入購物車</button>
             </div>
           </div>
         </div>
@@ -79,9 +79,7 @@ export default {
       this.$router.push('/allproducts')
     },
     add () {
-      console.log('add')
       this.count += 1
-      console.log(this.count)
     },
     minus () {
       if (this.count > 1) {
@@ -94,11 +92,6 @@ export default {
         })
       }
     },
-    toPurchase () {
-      console.log('click')
-      console.log(this.$router)
-      this.$router.push('/checkout/form')
-    },
     getSingleProduct () {
       this.Loading = true
       const id = this.$route.params.id
@@ -106,7 +99,6 @@ export default {
       this.$http.get(url).then(res => {
         if (res.data.success) {
           this.product = res.data.product
-          console.log(this.product)
           this.Loading = false
         }
       }).catch(err => {
@@ -121,7 +113,6 @@ export default {
       }
       const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart`
       this.$http.post(url, { data: cart }).then(res => {
-        console.log(res)
         this.loadingStatus.loadingItem = false
         emitter.emit('update-cart')
         this.$swal({
@@ -137,7 +128,6 @@ export default {
   },
   mounted () {
     window.scrollTo(0, 0) // 切換葉面自動滾回頂部
-    console.log(this.$route.params.id)
     this.getSingleProduct()
     // emitter.emit('toFrontNavBar')
   }

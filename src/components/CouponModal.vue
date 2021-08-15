@@ -4,8 +4,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="btn-close"
-                  data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div class="mb-3">
@@ -59,12 +58,6 @@ export default {
       due_date: ''
     }
   },
-  methods: {
-    click () {
-      console.log(this.tempCoupon)
-      console.log(this.due_date)
-    }
-  },
   emits: ['update-coupon'],
   watch: {
     coupon () {
@@ -72,12 +65,12 @@ export default {
       // 將時間格式改為 YYYY-MM-DD
       const dateAndTime = new Date(this.tempCoupon.due_date * 1000).toISOString().split('T')
       this.due_date = dateAndTime[0]
-      console.log(this.due_date)
+      // console.log(this.due_date)
     },
     due_date () {
       // 轉換為 unix-timestamp
       this.tempCoupon.due_date = Math.floor(new Date(this.due_date) / 1000)
-      console.log(this.tempCoupon.due_date)
+      // console.log(this.tempCoupon.due_date)
     }
   },
   mixins: [modalMixin]

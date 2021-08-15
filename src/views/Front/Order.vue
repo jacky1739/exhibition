@@ -23,7 +23,7 @@
       <div class="col-md-7">
         <div class="mb-3">
           <div class="d-flex">
-            <button class="input-group-addon btn btn-secondary btn-sm" type="button" @click.prevent="backToShopCart"><i class="bi bi-arrow-left"></i></button>
+            <button class="input-group-addon btn btn-secondary btn-sm" type="button" @click="backToShopCart"><i class="bi bi-arrow-left"></i></button>
             <p class="ml-1 font-size-light" style="margin-bottom: 0px;">返回購物車</p>
           </div>
           <div class="col-md-12">
@@ -144,7 +144,6 @@ export default {
       this.$http.post(url, { data: this.forms }).then(res => {
         if (res.data.success) {
           this.orderId = res.data.orderId
-          console.log(this.orderId)
           this.$router.push(`/checkout/${this.orderId}`)
         } else {
           this.$swal({
@@ -161,7 +160,6 @@ export default {
       const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart`
       this.$http.get(url).then(res => {
         if (res.data.success) {
-          console.log(res.data.data)
           this.cart = res.data.data
           this.final_total = res.data.data.final_total
           this.Loading = false
@@ -171,13 +169,11 @@ export default {
       })
     },
     addCouponCode () {
-      console.log(this.couponCode)
       const coupon = {
         code: this.couponCode
       }
       const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/coupon`
       this.$http.post(url, { data: coupon }).then(res => {
-        console.log(res.data.success)
         this.couponSuccess = true
         this.getCartList()
         this.$swal({

@@ -72,7 +72,6 @@ export default {
       this.Loading = true
       const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/admin/coupons`
       this.axios.get(url).then((res) => {
-        console.log(res)
         if (res.data.success) {
           this.coupons = res.data.coupons
           this.Loading = false
@@ -84,11 +83,9 @@ export default {
     updateCoupon (tempCoupon) {
       if (this.isNew) {
         this.tempCoupon.is_enabled = 1
-        console.log(this.tempCoupon)
         const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/admin/coupon`
         this.$http.post(url, { data: tempCoupon }).then(res => {
           if (res.data.success) {
-            console.log(res)
             this.getCoupons()
             this.$refs.couponModal.hideModal()
           }
@@ -101,14 +98,11 @@ export default {
             this.$refs.couponModal.hideModal()
           }
         })
-        console.log('click')
       }
     },
     deleteCoupon (id) {
-      console.log(id)
       const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/admin/coupon/${id}`
       this.axios.delete(url).then((res) => {
-        console.log(res)
         this.getCoupons()
       }).catch(() => {
         this.swal('無法刪除資料喔～快去看什麼問題吧！', 'error')
@@ -120,7 +114,6 @@ export default {
         this.tempCoupon = {
           due_date: Math.floor(new Date().getTime() / 1000)
         }
-        console.log(this.tempCoupon)
       } else {
         this.tempCoupon = { ...item }
       }

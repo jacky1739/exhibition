@@ -56,7 +56,7 @@
             </div>
             <div class="w-100" :class="{ 'd-none' : isPaid === true }">
               <div class="d-grid gap-2">
-                <button class="btn btn-secondary py-3 px-7" type="submit" @click.prevent="payOrder">確認結帳</button>
+                <button class="btn btn-secondary py-3 px-7" type="submit" @click="payOrder">確認結帳</button>
               </div>
             </div>
             <div class="mt-4 mb-3 d-flex">
@@ -104,7 +104,6 @@ export default {
     payOrder () {
       const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/pay/${this.orderId}`
       this.$http.post(url).then(res => {
-        console.log(res.data.success)
         if (res.data.success) {
           this.isPaid = res.data.success
           this.pay = '付款成功'

@@ -39,7 +39,7 @@
             <button type="button" class="btn btn-outline-secondary btn-sm" @click="openModal(item)">
               詳情
             </button>
-            <button type="button" class="btn btn-outline-danger btn-sm" @click.prevent="deleteOrder(item.id)">
+            <button type="button" class="btn btn-outline-danger btn-sm" @click="deleteOrder(item.id)">
               刪除
             </button>
           </div>
@@ -99,10 +99,8 @@ export default {
       // console.log(this.tempProduct)
     },
     deleteOrder (id) {
-      console.log(id)
       const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/admin/order/${id}`
       this.$http.delete(url).then(res => {
-        console.log(res)
         this.getOrders(this.pagination.current_page)
       }).catch(err => {
         alert(err.message)
@@ -112,7 +110,6 @@ export default {
   mounted () {
     const token = document.cookie.replace(/(?:(?:^|.*;\s*)hexToken\s*=\s*([^;]*).*$)|^.*$/, '$1')
     this.$http.defaults.headers.common.Authorization = token
-    console.log(token)
     this.getOrders()
   }
 }

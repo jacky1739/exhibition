@@ -38,17 +38,14 @@ export default {
   methods: {
     signin () {
       const url = `${process.env.VUE_APP_API}/admin/signin`
-      console.log(this.user.username, this.user.password)
       this.$http.post(url, this.user).then(res => {
         if (res.data.success) {
-          console.log(res.data.success)
           const { token, expired } = res.data
           document.cookie = `hexToken=${token};expires=${new Date(expired)};`
           this.$router.push('/backend/admin')
         } else {
           alert('請輸入正確的帳號密碼')
         }
-        console.log(res)
       }).catch(err => {
         alert(err.message)
       })

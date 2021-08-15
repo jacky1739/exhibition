@@ -83,7 +83,6 @@ export default {
         if (res.data.success) {
           this.products = res.data.products
           this.Loading = false
-          console.log(this.products)
         }
       })
     }

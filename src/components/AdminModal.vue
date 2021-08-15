@@ -65,7 +65,6 @@ export default {
   watch: {
     orderdetail () {
       this.detail = this.orderdetail.products
-      console.log(this.detail)
     }
   },
   mixins: [modalMixin]

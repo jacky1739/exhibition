@@ -96,11 +96,11 @@ export default {
     },
     addWordToData (whatKind) {
       const filterData = new Set()
-      console.log(whatKind)
+      // console.log(whatKind)
       switch (whatKind) {
         case 'all' :
           this.filterData = this.tospecial
-          console.log(this.filterData)
+          // console.log(this.filterData)
           break
         case 'special' :
           this.allProducts.forEach(item => {
