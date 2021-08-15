@@ -27,7 +27,7 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr class="" v-for="item in cart.carts" :key="item">
+                          <tr v-for="item in cart.carts" :key="item">
                             <td class="align-middle">
                               <button type="button" class="btn btn-secondary btn-sm" @click.stop="dropdownDeleteIcon(item.id)">
                                 <i class="bi bi-trash"></i>
