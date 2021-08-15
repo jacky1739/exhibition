@@ -75,6 +75,8 @@ export default {
         this.cart = res.data.data
         this.cartLength = res.data.data.carts.length
         // console.log(this.cartLength)
+      }).catch(err => {
+        alert(err.message)
       })
     },
     dropdownDeleteIcon (id) {

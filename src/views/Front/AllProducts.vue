@@ -24,6 +24,8 @@ export default {
           this.Loading = false
           // console.log(this.products)
         }
+      }).catch(err => {
+        alert(err.message)
       })
     }
   },

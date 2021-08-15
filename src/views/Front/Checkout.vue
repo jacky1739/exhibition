@@ -110,6 +110,8 @@ export default {
           this.$swal('付款成功!!')
           emitter.emit('update-cart')
         }
+      }).catch(err => {
+        alert(err.message)
       })
     }
   },

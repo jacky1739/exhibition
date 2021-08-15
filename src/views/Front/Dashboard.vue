@@ -27,6 +27,8 @@ export default {
         } else {
           alert('err')
         }
+      }).catch(err => {
+        alert(err.message)
       })
     }
   },

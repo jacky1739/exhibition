@@ -84,6 +84,8 @@ export default {
           this.products = res.data.products
           this.Loading = false
         }
+      }).catch(err => {
+        alert(err.message)
       })
     }
   },

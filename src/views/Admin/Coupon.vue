@@ -89,6 +89,8 @@ export default {
             this.getCoupons()
             this.$refs.couponModal.hideModal()
           }
+        }).catch(err => {
+          alert(err.message)
         })
       } else {
         const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/admin/coupon/${this.tempCoupon.id}`
@@ -97,6 +99,8 @@ export default {
             this.getCoupons()
             this.$refs.couponModal.hideModal()
           }
+        }).catch(err => {
+          alert(err.message)
         })
       }
     },

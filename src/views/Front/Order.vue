@@ -179,6 +179,8 @@ export default {
         this.$swal({
           title: '價格已打折'
         })
+      }).catch(err => {
+        alert(err.message)
       })
     }
   },
