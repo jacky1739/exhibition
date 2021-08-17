@@ -26,7 +26,7 @@
             <router-link :to="'/allproducts'">
               <button class="input-group-addon btn btn-secondary btn-sm" type="button"><i class="bi bi-arrow-left"></i></button>
             </router-link>
-            <p class="ml-1 font-size-light" style="margin-bottom: 0px;">返回</p>
+            <p class="ml-1 font-size-light" style="margin-bottom: 0px;">返回展覽</p>
           </div>
           <h2 class="font-weight-bold mb-3"><i class="bi bi-cart mr-0"></i><span class="mr-2">購物車清單</span></h2>
           <div class="cart-list d-flex bg-light mb-5" v-for="item in cart.carts" :key="item">

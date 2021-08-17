@@ -1,6 +1,5 @@
 <template>
   <div class="constainer">
-    <!-- <Navbar></Navbar> -->
     <router-view />
   </div>
 </template>
