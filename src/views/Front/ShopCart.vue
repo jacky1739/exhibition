@@ -40,12 +40,27 @@
               </div>
               <p class="ellipsis font-size-light">{{ item.product.description}}</p>
               <div class="d-flex justify-content-between">
-                <div class="d-flex cart-input-group">
+                <!-- <div class="d-flex cart-input-group">
                   <button type="button" class="btn btn-secondary btn-sm px-2" @click="updateCart(item.id, item.qty-1)" :disabled="loadingStatus.loadingItem === item.id"><i class="bi bi-dash"></i></button>
                   <input class="form-control rounded-0" readonly="readonly" placeholder="1" v-model.number="item.qty">
                   <button type="button" class="btn btn-secondary btn-sm px-2" @click="updateCart(item.id, item.qty+1)" :disabled="loadingStatus.loadingItem === item.id"><i class="bi bi-plus"></i></button>
+                </div> -->
+                <div class="col-md-3">
+                  <div class="input-group d-flex bg-light rounded cart-input-group">
+                    <div class="input-group-prepend">
+                      <button class="btn btn-outline-secondary border-0 py-2" @click="updateCart(item.id, item.qty-1)" :disabled="loadingStatus.loadingItem === item.id" type="button" id="button-addon1">
+                        <i class="bi bi-dash"></i>
+                      </button>
+                    </div>
+                    <input type="number" class="form-control border-0 text-center my-auto shadow-none bg-light" v-model.number="item.qty" placeholder="" readonly="readonly" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary border-0 py-2" @click="updateCart(item.id, item.qty+1)" :disabled="loadingStatus.loadingItem === item.id" type="button" id="button-addon2">
+                        <i class="bi bi-plus"></i>
+                      </button>
+                    </div>
+                  </div>
                 </div>
-                <p class="font-size-light">總共$ {{ item.total }}</p>
+                <p class="font-size-light col-form-label">總共$ {{ item.total }}</p>
               </div>
             </div>
           </div>
@@ -75,6 +90,7 @@ import emitter from '../../assets/javascript/emitter'
 export default {
   data () {
     return {
+      count: 1,
       cart: {},
       totalPrice: {},
       loadingStatus: {
@@ -92,11 +108,9 @@ export default {
       const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart`
       this.$http.get(url).then(res => {
         if (res.data.success) {
-          // console.log(res.data.data.carts)
           this.cart = res.data.data
           this.totalPrice = res.data.data.final_total
           this.Loading = false
-          // console.log(this.totalPrice)
         }
       }).catch(err => {
         alert(err.message)
