@@ -40,11 +40,6 @@
               </div>
               <p class="ellipsis font-size-light">{{ item.product.description}}</p>
               <div class="d-flex justify-content-between">
-                <!-- <div class="d-flex cart-input-group">
-                  <button type="button" class="btn btn-secondary btn-sm px-2" @click="updateCart(item.id, item.qty-1)" :disabled="loadingStatus.loadingItem === item.id"><i class="bi bi-dash"></i></button>
-                  <input class="form-control rounded-0" readonly="readonly" placeholder="1" v-model.number="item.qty">
-                  <button type="button" class="btn btn-secondary btn-sm px-2" @click="updateCart(item.id, item.qty+1)" :disabled="loadingStatus.loadingItem === item.id"><i class="bi bi-plus"></i></button>
-                </div> -->
                 <div class="col-md-3">
                   <div class="input-group d-flex bg-light rounded cart-input-group">
                     <div class="input-group-prepend">
