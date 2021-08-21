@@ -26,11 +26,11 @@
       </thead>
       <tbody>
         <tr v-for="item in orders.orders" :key="item">
-         <td>{{ item.user.name }}</td>
-         <td>{{ item.user.address }}</td>
-         <td>{{ item.id }}</td>
-         <td>{{ item.total }}</td>
-         <td>
+         <td class="align-middle">{{ item.user.name }}</td>
+         <td class="align-middle">{{ item.user.address }}</td>
+         <td class="align-middle">{{ item.id }}</td>
+         <td class="align-middle">{{ item.total }}</td>
+         <td class="align-middle">
           <span v-if="item.is_paid" class="text-success">已付款</span>
           <span v-else>未付款</span>
          </td>

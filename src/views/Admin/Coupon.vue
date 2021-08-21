@@ -25,14 +25,14 @@
       </thead>
       <tbody>
         <tr v-for="item in coupons" :key="item">
-          <td class="text-center">{{ item.title }}</td>
-          <td>{{ item.code }}</td>
-          <td class="text-center">{{ item.percent }}</td>
-          <td>{{ new Date(item.due_date * 1000).toLocaleDateString() }}</td>
-          <td>
+          <td class="align-middle text-center">{{ item.title }}</td>
+          <td class="align-middle">{{ item.code }}</td>
+          <td class="align-middle text-center">{{ item.percent }}</td>
+          <td class="align-middle">{{ new Date(item.due_date * 1000).toLocaleDateString() }}</td>
+          <td class="align-middle">
             <span v-if="item.is_enabled === 1" class="text-success">啟用</span>
             <span v-else class="text-muted">未啟用</span>
-        </td>
+          </td>
           <td>
             <div class="btn-group">
               <input type="button" value="編輯" class="btn btn-outline-success border-success" @click="openCouponModal(false, item)"/>
