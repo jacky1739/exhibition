@@ -15,7 +15,7 @@
     top: 3px; font-size: 13px;">{{ cart.carts !== undefined  &&  cart.carts.length }}</div>
                   </a>
                   <div class="dropdown-menu position-absolute" aria-labelledby="dropdownMenuLink" style="min-width: 350px; right: -15px; left: auto;">
-                    <div class="px-4 py-3">
+                    <div class="px-4 pb-3 pt-2">
                       <h6 class="font-size-light text-center border-bottom pb-2">已選擇商品</h6>
                       <table class="table mb-4">
                         <thead class="border-bottom">
