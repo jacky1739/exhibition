@@ -34,7 +34,7 @@
           <span v-if="item.is_paid" class="text-success">已付款</span>
           <span v-else>未付款</span>
          </td>
-         <td>
+         <td class="align-middle">
            <div class="btn-group">
             <button type="button" class="btn btn-outline-secondary btn-sm" @click="openModal(item)">
               詳情
