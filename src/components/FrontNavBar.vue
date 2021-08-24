@@ -2,8 +2,8 @@
       <div class="container bg-white">
         <nav class="navbar navbar-expand-lg navbar-light d-flex">
           <div class="container-fluid justify-content-sapce-between">
-            <a class="navbar-brand text-secondary font-size-Regular" href="./index.html">
-              EXHIBITION
+            <a class="navbar-brand text-secondary nav-title" href="./index.html">
+              ARTS EXHIBITION
             </a>
             <div>
               <ul class="navbar-nav ms-auto">
