@@ -7,7 +7,7 @@
           <h1 class="h2 font-color-secondary mb-4 font-size-bold wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">台北當代藝術展</h1>
           <p class="h3 font-color-secondary mb-4 font-size-Regular wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">01 JUN - 31 OCT</p>
           <div class="d-grid gap-2">
-            <router-link :to="'/about'" class="btn btn-outline-secondary rounded-pill font-color-secondary rounded-pill border-white wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.5s">關於我們</router-link>
+            <router-link :to="'/aboutus'" class="btn btn-outline-secondary rounded-pill font-color-secondary rounded-pill border-white wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.5s">關於我們</router-link>
           </div>
         </div>
       </div>

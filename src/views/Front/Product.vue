@@ -1,6 +1,6 @@
 <template>
   <Loading :isLoading="Loading"></Loading>
-  <div class="container">
+  <div class="container pt-5">
       <div class="row align-items-center mb-5">
         <div class="mb-4 d-flex">
           <button class="input-group-addon btn btn-secondary btn-sm" type="button" @click="backToProducts"><i class="bi bi-arrow-left"></i></button>

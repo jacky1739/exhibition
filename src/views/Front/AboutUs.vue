@@ -1,13 +1,13 @@
 <template>
   <section class="about-banner d-flex mb-5">
     <div class="container d-flex align-items-center justify-content-center">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="d-flex align-items-center justify-content-center">
-                  <h1 class="text-secondary font-size-bold">關於我們</h1>
-                </div>
+      <div class="row">
+          <div class="col-md-12">
+            <div class="d-flex align-items-center justify-content-center">
+              <h1 class="text-secondary font-size-bold">關於我們</h1>
             </div>
-        </div>
+          </div>
+      </div>
     </div>
   </section>
   <section class="container mb-5">
