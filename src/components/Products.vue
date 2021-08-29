@@ -34,7 +34,7 @@
             </div>
             <div>
               <p class="card-price"><small class="text-muted"><del>NT$ {{ $toCurrency(item.origin_price) }}</del>/ NT$ {{ $toCurrency(item.price) }}</small></p>
-              <div class="d-flex">
+              <div>
                 <router-link :to="`/product/${item.id}`">
                   <button type="button" class="btn btn-secondary mr-0">查看詳情</button>
                 </router-link>

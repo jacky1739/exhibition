@@ -26,38 +26,12 @@
         </div>
         <div class="card-body border">
           <h2 class="text-center">2020 台味設計展</h2>
-          <p class="text-center">這是一個專屬於設計系畢業生的展覽，沒有華</p>
+          <!-- <p class="text-center">這是一個專屬於設計系畢業生的展覽，沒有華</p> -->
           <p class="card-price text-center"><small class="text-muted"><del>NT$ 750</del>/ 500</small></p>
-        </div>
-      </div>
-      <div class="col-md-4 cursor mb-5" @click.prevent="">
-        <div class="product-img">
-          <img src="../../../public/images/card-1.jpg" alt="">
-        </div>
-        <div class="card-body border">
-          <h2 class="text-center">2020 台味設計展</h2>
-          <p class="text-center">這是一個專屬於設計系畢業生的展覽，沒有華</p>
-          <p class="card-price text-center"><small class="text-muted"><del>NT$ 750</del>/ 500</small></p>
-        </div>
-      </div>
-      <div class="col-md-4 cursor mb-5" @click.prevent="">
-        <div class="product-img">
-          <img src="../../../public/images/card-1.jpg" alt="">
-        </div>
-        <div class="card-body border">
-          <h2 class="text-center">2020 台味設計展</h2>
-          <p class="text-center">這是一個專屬於設計系畢業生的展覽，沒有華</p>
-          <p class="card-price text-center"><small class="text-muted"><del>NT$ 750</del>/ 500</small></p>
-        </div>
-      </div>
-      <div class="col-md-4 cursor mb-5" @click.prevent="">
-        <div class="product-img">
-          <img src="../../../public/images/card-1.jpg" alt="">
-        </div>
-        <div class="card-body border">
-          <h2 class="text-center">2020 台味設計展</h2>
-          <p class="text-center">這是一個專屬於設計系畢業生的展覽，沒有華</p>
-          <p class="card-price text-center"><small class="text-muted"><del>NT$ 750</del>/ 500</small></p>
+          <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-secondary mr-0">查看詳情</button>
+            <button type="button" class="btn btn-third border-secondary">加入購物車</button>
+          </div>
         </div>
       </div>
     </div>
