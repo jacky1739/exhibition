@@ -41,7 +41,7 @@
 <script>
 export default {
   methods: {
-    getDat () {
+    getData () {
       console.log('hi')
     },
     click () {
@@ -49,6 +49,7 @@ export default {
     }
   },
   mounted () {
+    this.getData()
   }
 }
 </script>
