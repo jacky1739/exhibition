@@ -87,20 +87,20 @@ export default {
         alert(err.message)
       })
     },
-    getCategories () {
-      const categories = new Set()
-      this.allProducts.forEach(item => {
-        categories.add(item.category)
-      })
-      this.categories = [...categories]
-    },
+    // getCategories () {
+    //   const categories = new Set()
+    //   this.allProducts.forEach(item => {
+    //     categories.add(item.category)
+    //   })
+    //   this.categories = [...categories]
+    // },
     addWordToData (whatKind) {
       const filterData = new Set()
       // console.log(whatKind)
       switch (whatKind) {
         case 'all' :
           this.filterData = this.tospecial
-          // console.log(this.filterData)
+          console.log(this.filterData)
           break
         case 'special' :
           this.allProducts.forEach(item => {
@@ -134,7 +134,7 @@ export default {
       this.allProducts = this.tospecial
       this.filterData = this.tospecial
       // console.log(this.allProducts)
-      this.getCategories()
+      // this.getCategories()
     }
   },
   computed: {

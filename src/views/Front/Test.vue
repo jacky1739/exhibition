@@ -14,7 +14,7 @@
             <button class="btn btn-secondary category-btn rounded-0" @click.prevent="addWordToData('hot')">熱門展覽</button>
           </li>
            <li>
-            <button class="btn btn-secondary category-btn rounded-0" @click.prevent="addWordToData('normal')">一般展覽</button>
+            <button class="btn btn-secondary category-btn rounded-0" @click="addWordToData('normal')">一般展覽</button>
           </li>
         </ul>
       </div>
@@ -46,9 +46,12 @@ export default {
     },
     click () {
       console.log('click')
+    },
+    addWordToData (type) {
+      console.log(type)
     }
   },
-  mounted () {
+  mounted (type) {
     this.getData()
   }
 }
